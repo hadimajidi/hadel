@@ -1,0 +1,40 @@
+body {
+  background: #124567;
+}
+
+.holder {
+  max-width: 50%;
+  margin: 25vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background: #ccc;
+  border-radius: 10px;
+}
+
+#red,
+#yellow,
+#blue,
+svg {
+  transition: all 1s ease-in-out;
+}
+
+svg {
+  width: 300px;
+  height: 300px;
+}
+
+svg {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+svg:hover {
+  filter: drop-shadow(9px 15px 3px rgb(0 0 0 / 0.4));
+}
+
+svg:hover #red,
+svg:hover #yellow,
+svg:hover #blue {
+  transform: rotate3d(3, 2, 0, 60deg);
+}
