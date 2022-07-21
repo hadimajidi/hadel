@@ -26,14 +26,14 @@ body {
 #red2,
 #red3,
 #red4 {
-  transition: all 4s 1s ease-in-out;
+  transition: all 4s ease-in-out;
 }
 
 #blue,
 #blue2,
 #blue3,
 #blue4 {
-  transition: all 4s 0.5s ease-in-out;
+  transition: all 4s ease-in-out;
 }
 
 svg {
