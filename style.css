@@ -2,77 +2,34 @@ body {
   background: #124567;
 }
 
+:root{
+  --x: 2600px;
+  --y: -15px;
+}
+
 .holder {
   max-width: 500px;
-  height: 400px;
+  height: 300px;
   margin: 25vh auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   padding: 3rem;
   background: #ccc;
   border-radius: 10px;
   overflow-x: hidden;
 }
 
-#yellow,
-#yellow2,
-#yellow3,
-#yellow4 {
-  transition: all 4s ease-in-out;
-}
-
-#red,
-#red2,
-#red3,
-#red4 {
-  transition: all 4s ease-in-out;
-}
-
-#blue,
-#blue2,
-#blue3,
-#blue4 {
-  transition: all 4s ease-in-out;
-}
-
+#sine, #sine2, #sine3,
 svg {
-  transition: all 1s ease-in-out;
+  transition: all 4s ease-in-out;
 }
 
-:root {
-  --yellow-value: 2380px;
-  --blue-value: 2900px;
+#sine2 {
+  transform: translate(var(--x), var(--y));
 }
 
-#yellow2 {
-  transform: translate(2380px, 7px);
-}
-#yellow3 {
-  transform: translate(calc(var(--yellow-value) * 2), 7px);
-}
-#yellow4 {
-  transform: translate(calc(var(--yellow-value) * 3), 7px);
-}
-
-#blue2 {
-  transform: translate(2900px, 7px);
-}
-#blue3 {
-  transform: translate(calc(var(--blue-value) * 2), 7px);
-}
-#blue4 {
-  transform: translate(calc(var(--blue-value) * 3), 7px);
-}
-
-#red2 {
-  transform: translate(2380px, 7px);
-}
-#red3 {
-  transform: translate(calc(var(--yellow-value) * 2), 7px);
-}
-#red4 {
-  transform: translate(calc(var(--yellow-value) * 3), 7px);
+#sine3 {
+  transform: translate(calc(var(--x) * 2), calc(var(--y) * 2));
 }
 
 svg {
@@ -84,52 +41,18 @@ svg {
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
+svg:hover #sine{
+  transform: translate(calc(var(--x) * -1), calc(var(--y) * -1));
+}
+
+svg:hover #sine2{
+  transform: translate(0, 0);
+}
+
+svg:hover #sine3{
+  transform: translate(var(--x), var(--y));
+}
+
 /* svg:hover {
   filter: drop-shadow(9px 15px 3px rgb(0 0 0 / 0.4));
-}
-*/
-
-svg:hover #yellow2 {
-  transform: translate(calc(var(--yellow-value) * -2), 7px);
-}
-svg:hover #yellow {
-  transform: translate(calc(var(--yellow-value) * -3), 7px);
-}
-svg:hover #yellow3 {
-  transform: translate(calc(var(--yellow-value) * -1), 7px);
-}
-svg:hover #yellow4 {
-  transform: translate(0px, 7px);
-}
-
-svg:hover #red2 {
-  transform: translate(calc(var(--yellow-value) * -2), 7px);
-}
-svg:hover #red {
-  transform: translate(calc(var(--yellow-value) * -3), 7px);
-}
-svg:hover #red3 {
-  transform: translate(calc(var(--yellow-value) * -1), 7px);
-}
-svg:hover #red4 {
-  transform: translate(0px, 7px);
-}
-
-svg:hover #blue {
-  transform: translate(calc(var(--blue-value) * -3), 7px);
-}
-svg:hover #blue2 {
-  transform: translate(calc(var(--blue-value) * -2), 7px);
-}
-svg:hover #blue3 {
-  transform: translate(calc(var(--blue-value) * -1), 7px);
-}
-svg:hover #blue4 {
-  transform: translate(0px, 7px);
-}
-
-/* svg:hover #red,
-svg:hover #yellow,
-svg:hover #blue {
-  transform: rotate3d(3, 2, 0, 60deg);
 } */
