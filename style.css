@@ -7,9 +7,13 @@ body {
   --y: -15px;
 }
 
+svg, #wave, #wave2, #wave3, #wave4{
+  transition: all 4s ease-in-out;
+}
+
 .holder {
   max-width: 500px;
-  height: 300px;
+  height: 400px;
   margin: 25vh auto;
   display: grid;
   place-items: center;
@@ -19,40 +23,38 @@ body {
   overflow-x: hidden;
 }
 
-#sine, #sine2, #sine3,
-svg {
-  transition: all 4s ease-in-out;
+#wave2{
+  transform: translateX(339px);
 }
 
-#sine2 {
-  transform: translate(var(--x), var(--y));
+#wave3{
+  transform: translateX(678px);
 }
 
-#sine3 {
-  transform: translate(calc(var(--x) * 2), calc(var(--y) * 2));
+#wave4{
+  transform: translateX(1017px);
 }
 
-svg {
-  width: 100%;
-  height: 100%;
+svg{
+  background: #F39200;
+  border-radius: 50%;
+  border: 25px solid black;
+  height: 350px;
+  width: 350px; 
 }
 
-svg {
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+svg:hover #wave{
+  transform: translateX(-1017px);
 }
 
-svg:hover #sine{
-  transform: translate(calc(var(--x) * -1), calc(var(--y) * -1));
+svg:hover #wave2{
+  transform: translateX(-678px);
 }
 
-svg:hover #sine2{
-  transform: translate(0, 0);
+svg:hover #wave3{
+  transform: translateX(-339px);
 }
 
-svg:hover #sine3{
-  transform: translate(var(--x), var(--y));
+svg:hover #wave4{
+  transform: translateX(0);
 }
-
-/* svg:hover {
-  filter: drop-shadow(9px 15px 3px rgb(0 0 0 / 0.4));
-} */
